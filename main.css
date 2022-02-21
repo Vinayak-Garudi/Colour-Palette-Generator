@@ -1,0 +1,104 @@
+:root {
+    --primary: #d81a5d;
+    --secondary: #8a4fff;
+    --light: #eee;
+    --grey: #aaa;
+    --dark: #1e2f42;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    /* padding: 0; */
+
+    font-family: 'Fira Sans', sans-serif;
+}
+
+button, input {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    background: var(--light);
+}
+
+main {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: var(--dark);
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.generator-button {
+    color: var(--primary);
+    font-size: inherit;
+    font-weight: 700;
+}
+
+.colours {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+
+.colour {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    color: #fff;
+    background-color: var(--dark);
+    transition: 0.4s ease-out;
+    margin: 10px;
+    border: 2px solid transparent;
+}
+
+.colour.copied {
+    border-color: red;
+}
+
+.lock-toggle {
+    opacity: 0.5;
+}
+
+.lock-toggle.is-locked {
+    opacity: 1;
+}
+
+.colour-input {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+@media (min-width: 400px) {
+    .colours {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* @media (min-width: 1024px) {
+    .colours {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .colour {
+        align-items: center;
+        justify-content: center;
+    }
+} */
